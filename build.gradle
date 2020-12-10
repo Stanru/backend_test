@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.test'
+version '1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'ru.test.backend_test.Main'
+        )
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
