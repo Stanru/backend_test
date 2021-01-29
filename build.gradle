@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'ru.test'
-version '2.0.1'
+version '3.0.1'
 
 repositories {
     mavenCentral()
